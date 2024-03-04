@@ -11,13 +11,15 @@ SAVE THE UNIVERSE is an app to assemble a team of Rick & Morty characters to sav
 WIREFRAME/STYLE GUIDE:
 <img src="image.png">
 credit: Figma
-![wireframe](image.png)
+
 
 User story:
 As a user, I can navigate through a character list and click a character to display information on the character. I can create a squad to 'save the universe' by entering my squad name and selecting enter. I can add characters to my squad by selecting "add to squad" once my character has been selected. I can remove the character by selecting the delete (X) button below each character in the build your squad box.
   
 API: https://rickandmortyapi.com/api/character
+
 Endpoints: https://rickandmortyapi.com/api/character/id
+
 db.json example:
 {
             "id": 1,
