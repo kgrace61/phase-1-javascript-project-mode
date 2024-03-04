@@ -1,0 +1,645 @@
+{
+    "chars": [
+        {
+            "id": 1,
+            "name": "Rick Sanchez",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "Earth (C-137)",
+            },
+            "location": {
+                "name": "Citadel of Ricks",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/1",
+        },
+        {
+            "id": 2,
+            "name": "Morty Smith",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Citadel of Ricks",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/2",
+        },
+        {
+            "id": 3,
+            "name": "Summer Smith",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Female",
+            "origin": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "location": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/3",
+        },
+        {
+            "id": 4,
+            "name": "Beth Smith",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Female",
+            "origin": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "location": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/4",
+        },
+        {
+            "id": 5,
+            "name": "Jerry Smith",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "location": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/5",
+        },
+        {
+            "id": 6,
+            "name": "Abadango Cluster Princess",
+            "status": "Alive",
+            "species": "Alien",
+            "type": "",
+            "gender": "Female",
+            "origin": {
+                "name": "Abadango",
+            },
+            "location": {
+                "name": "Abadango",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/6.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/6",
+        },
+        {
+            "id": 7,
+            "name": "Abradolf Lincler",
+            "status": "unknown",
+            "species": "Human",
+            "type": "Genetic experiment",
+            "gender": "Male",
+            "origin": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "location": {
+                "name": "Testicle Monster Dimension",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/7",
+        },
+        {
+            "id": 8,
+            "name": "Adjudicator Rick",
+            "status": "Dead",
+            "species": "Human",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Citadel of Ricks",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/8.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/8",
+        },
+        {
+            "id": 9,
+            "name": "Agency Director",
+            "status": "Dead",
+            "species": "Human",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "location": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/9.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/9",
+        },
+        {
+            "id": 10,
+            "name": "Alan Rails",
+            "status": "Dead",
+            "species": "Human",
+            "type": "Superhuman (Ghost trains summoner)",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Worldender's lair",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/10.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/10",
+        },
+        {
+            "id": 11,
+            "name": "Albert Einstein",
+            "status": "Dead",
+            "species": "Human",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "Earth (C-137)",
+            },
+            "location": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/11.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/11",
+        },
+        {
+            "id": 12,
+            "name": "Alexander",
+            "status": "Dead",
+            "species": "Human",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "Earth (C-137)",
+            },
+            "location": {
+                "name": "Anatomy Park",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/12.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/12",
+        },
+        {
+            "id": 13,
+            "name": "Alien Googah",
+            "status": "unknown",
+            "species": "Alien",
+            "type": "",
+            "gender": "unknown",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/13.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/13",
+        },
+        {
+            "id": 14,
+            "name": "Alien Morty",
+            "status": "unknown",
+            "species": "Alien",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Citadel of Ricks",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/14.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/14",
+        },
+        {
+            "id": 15,
+            "name": "Alien Rick",
+            "status": "unknown",
+            "species": "Alien",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Citadel of Ricks",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/15",
+        },
+        {
+            "id": 16,
+            "name": "Amish Cyborg",
+            "status": "Dead",
+            "species": "Alien",
+            "type": "Parasite",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/16.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/16",
+        },
+        {
+            "id": 17,
+            "name": "Annie",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Female",
+            "origin": {
+                "name": "Earth (C-137)",
+            },
+            "location": {
+                "name": "Anatomy Park",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/17.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/17",
+        },
+        {
+            "id": 18,
+            "name": "Antenna Morty",
+            "status": "Alive",
+            "species": "Human",
+            "type": "Human with antennae",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Citadel of Ricks",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/18",
+        },
+        {
+            "id": 19,
+            "name": "Antenna Rick",
+            "status": "unknown",
+            "species": "Human",
+            "type": "Human with antennae",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "unknown",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/19.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/19",
+        },
+        {
+            "id": 20,
+            "name": "Ants in my Eyes Johnson",
+            "status": "unknown",
+            "species": "Human",
+            "type": "Human with ants in his eyes",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Interdimensional Cable",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/20.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/20",
+        }
+        {
+            "id": 21,
+            "name": "Aqua Morty",
+            "status": "unknown",
+            "species": "Humanoid",
+            "type": "Fish-Person",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Citadel of Ricks", 
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/21.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/21",
+        },
+        {
+            "id": 22,
+            "name": "Aqua Rick",
+            "status": "unknown",
+            "species": "Humanoid",
+            "type": "Fish-Person",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+        },
+            "location": {
+                "name": "Citadel of Ricks",
+        },
+            "image": "https://rickandmortyapi.com/api/character/avatar/22.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/22",
+        },
+        {
+            "id": 23,
+            "name": "Arcade Alien",
+            "status": "unknown",
+            "species": "Alien",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Immortality Field Resort",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/23.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/23",
+        },
+        {
+            "id": 24,
+            "name": "Armagheadon",
+            "status": "Alive",
+            "species": "Alien",
+            "type": "Cromulon",
+            "gender": "Male",
+            "origin": {
+                "name": "Signus 5 Expanse",
+            },
+            "location": {
+                "name": "Signus 5 Expanse",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/24.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/24",
+        },
+        {
+            "id": 25,
+            "name": "Armothy",
+            "status": "Dead",
+            "species": "unknown",
+            "type": "Self-aware arm",
+            "gender": "Male",
+            "origin": {
+                "name": "Post-Apocalyptic Earth",
+            },
+            "location": {
+                "name": "Post-Apocalyptic Earth",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/25.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/25",
+        },
+        {
+            "id": 26,
+            "name": "Arthricia",
+            "status": "Alive",
+            "species": "Alien",
+            "type": "Cat-Person",
+            "gender": "Female",
+            "origin": {
+                "name": "Purge Planet",
+            },
+            "location": {
+                "name": "Purge Planet",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/26.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/26",
+        },
+        {
+            "id": 27,
+            "name": "Artist Morty",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Citadel of Ricks",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/27.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/27",
+        },
+        {
+            "id": 28,
+            "name": "Attila Starwar",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Interdimensional Cable",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/28.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/28",
+        },
+        {
+            "id": 29,
+            "name": "Baby Legs",
+            "status": "Alive",
+            "species": "Human",
+            "type": "Human with baby legs",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Interdimensional Cable",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/29.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/29",
+        },
+        {
+            "id": 30,
+            "name": "Baby Poopybutthole",
+            "status": "Alive",
+            "species": "Poopybutthole",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "unknown",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/30.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/30",
+        },
+        {
+            "id": 31,
+            "name": "Baby Wizard",
+            "status": "Dead",
+            "species": "Alien",
+            "type": "Parasite",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/31.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/31",
+        },
+        {
+            "id": 32,
+            "name": "Bearded Lady",
+            "status": "Dead",
+            "species": "Alien",
+            "type": "Parasite",
+            "gender": "Female",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Earth (Replacement Dimension)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/32.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/32",
+        },
+        {
+            "id": 33,
+            "name": "Beebo",
+            "status": "Dead",
+            "species": "Alien",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "Venzenulon 7",
+            },
+            "location": {
+                "name": "Venzenulon 7",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/33.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/33",
+        },
+        {
+            "id": 34,
+            "name": "Benjamin",
+            "status": "Alive",
+            "species": "Poopybutthole",
+            "type": "",
+            "gender": "Male",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "Interdimensional Cable",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/34.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/34",
+        },
+        {
+            "id": 35,
+            "name": "Bepisian",
+            "status": "Alive",
+            "species": "Alien",
+            "type": "Bepisian",
+            "gender": "unknown",
+            "origin": {
+                "name": "Bepis 9",
+            },
+            "location": {
+                "name": "Bepis 9",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/35.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/35",
+        }
+        {
+            "id": 36,
+            "name": "Beta-Seven",
+            "status": "Alive",
+            "species": "Alien",
+            "type": "Hivemind",
+            "gender": "unknown",
+            "origin": {
+                "name": "unknown",
+            },
+            "location": {
+                "name": "unknown",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/36.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/36",
+            },
+            {
+            "id": 37,
+            "name": "Beth Sanchez",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Female",
+            "origin": {
+                "name": "Earth (C-500A)",
+            },
+            "location": {
+                "name": "Earth (C-500A)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/37.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/37",
+        },
+        {
+            "id": 38,
+            "name": "Beth Smith",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Female",
+            "origin": {
+                "name": "Earth (C-137)",
+            },
+            "location": {
+                "name": "Earth (C-137)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/38.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/38",
+        },
+        {
+            "id": 39,
+            "name": "Beth Smith",
+            "status": "Alive",
+            "species": "Human",
+            "type": "",
+            "gender": "Female",
+            "origin": {
+                "name": "Earth (Evil Rick's Target Dimension)",
+            },
+            "location": {
+                "name": "Earth (Evil Rick's Target Dimension)",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/39.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/39",
+        },
+        {
+            "id": 40,
+            "name": "Beth's Mytholog",
+            "status": "Dead",
+            "species": "Mythological Creature",
+            "type": "Mytholog",
+            "gender": "Female",
+            "origin": {
+                "name": "Nuptia 4",
+            },
+            "location": {
+                "name": "Nuptia 4",
+            },
+            "image": "https://rickandmortyapi.com/api/character/avatar/40.jpeg",
+            "url": "https://rickandmortyapi.com/api/character/40",
+            }
+        ]
+    }
+
