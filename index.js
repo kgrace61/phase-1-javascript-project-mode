@@ -106,7 +106,18 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedCharacter.appendChild(removeBtn);
         // Append the selected character container to the selected team section in the HTML document
         selectedTeam.appendChild(selectedCharacter);
+
       });
+      function submitTeamName() {
+        const teamNameInput = document.getElementById('team-name-input');
+        const newTeamName = teamNameInput.value;
+        if (newTeamName.trim() !== '') {
+            selectedTeamTitle.textContent = newTeamName;
+        } else {
+            alert('Please enter a valid team name.');
+        }
+    }
+    
     }
   
     // This function displays the clicked character thumbnail.
@@ -127,5 +138,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Call resetCharacterDetails to clear details on load
     resetCharacterDetails();
   });
-
-

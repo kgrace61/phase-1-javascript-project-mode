@@ -1,20 +1,28 @@
+@font-face {
+  font-family: GetSchwifty;
+  src: url(get_schwifty.ttf);
+}
+@font-face {
+  font-family: irishgrover;
+  src: url(irishgrover.ttf)
+}
 body {
-  font-family: Arial, sans-serif;
+  font-family: irishgrover, sans-serif;
   margin: 0;
   background-image: url('https://cdn.europosters.eu/image/1300/art-photo/rick-and-morty-space-i115643.jpg');
   padding: 0;
 }
 h1 {
-  font-family: cursive;
+  font-family: GetSchwifty;
   padding: 10px;
   width: 300px;
-  border: 15px solid green;
-  margin 20px;
-  text-align: right;
+  border: 1px solid green;
+  margin: 20px;
+  text-align: center;
   color: greenyellow;
   background-color: black;
-  position: fixed;
-  right: 0;
+  position: absolute;
+  right: calc(0.5in - 10px);
   top: 0;
 }
 table {
@@ -22,19 +30,27 @@ table {
   color: red;
   position: absolute;
   right: 0;
-  margin-top: 200px;
+  margin-top: 300px;
   padding: 20px;
 }
 
 p {
+  font-family: irishgrover;
+  padding: 10px;
+  width: 390px;
+  border: 1px solid green;
   background-color: black;
   color: white;
   text-align: right;
   margin-top: 100px;
+  position: absolute;
+  right: calc(0.5in - 10px);
+  top: 0;
   
 }
 
 .container {
+  margin-top: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -54,16 +70,24 @@ p {
   height: 100px;
   cursor: pointer;
 }
+.character-thumbnail-small {
+  width: 125px;
+  height: 125px;
+}
 
 .selected-team {
-  margin-top: 20px;
+  border: 2px solid black;
+  width: 1400px;
+  margin-top: 300px;
+  padding: 10px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  
+
 }
 
 .selected-character {
-  margin: 10px;
+  flex: 0 0 18%;
 }
 
 .character-details {
@@ -92,3 +116,8 @@ Styling for the selected thumbnail /
   font-size: 18px;
   margin-bottom: 10px;
 }
+
+table{
+  margin-top: 400px;
+}
+
