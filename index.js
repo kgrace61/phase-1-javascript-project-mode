@@ -1,6 +1,3 @@
-
-
-
 // display the image to the page
 // create a new image div, append image to image div
 //^ did this in rr, toy tale 
@@ -22,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     selectedTeamTitle.textContent = 'YOUR SELECTED TEAM'; //set the text content of the title
     selectedTeamTitle.classList.add('selected-team-title'); //add a CSS class to the title element
     selectedTeam.appendChild(selectedTeamTitle) //append the title to the selected team container
-    
+
 //fetch data from db.json and process it
 fetch('db.json')
     .then(response => response.json()) //convert the fetched response to json format
@@ -44,11 +41,11 @@ fetch('db.json')
             const addToTeamBtn = document.createElement('button');
             addtoTeamBtn = 'Add to Squad';// set button text content
             addToTeamBtn.addEventListener('click', () => addToTeam(character)); //add event listener to add the character to the team when clicked
-            
+
             characterItem.appendChild(characterThumbnail); //append thumbnail image to character container
             characterItem.appendChild(addToTeamBtn); //append button to character container
             characterItem.appendChild(characterItem); // append the character container to the character list in HTML
-        
+
         });
         .catch(error => {
             console.error('Error fetching data'; error)//log any errors that may occur during fetch proccess

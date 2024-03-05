@@ -1,44 +1,94 @@
-*{
-  margin: 0;
-  font-size: 1.2rem;
-  font-family: helvetica;
-  box-sizing: border-box;
-  cursor: crosshair;
-  color: rgb(26, 238, 15) 
-}
 body {
-    padding: 1rem;
-    text-align: center;
-    background-image: url('https://cdn.europosters.eu/image/1300/art-photo/rick-and-morty-space-i115643.jpg');
-    background-size: cover; 
-    background-position: center; 
-  }
-  h1 {
-    padding: 10px;
-    width: 300px;
-    border: 15px solid green;
-    margin 20px;
-    text-align: right;
-    color: greenyellow;
-    background-color: black;
-    position: fixed;
-    right: 0;
-    top: 0;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-image: url('https://cdn.europosters.eu/image/1300/art-photo/rick-and-morty-space-i115643.jpg');
+  padding: 0;
+}
+h1 {
+  font-family: cursive;
+  padding: 10px;
+  width: 300px;
+  border: 15px solid green;
+  margin 20px;
+  text-align: right;
+  color: greenyellow;
+  background-color: black;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+table {
+  background-color: black;
+  color: red;
+  position: absolute;
+  right: 0;
+  margin-top: 200px;
+  padding: 20px;
+}
 
-  p {
-    background-color: black;
-    color: white;
-    text-align: right;
-    margin-top: 100px;
-    
-  }
-  table {
-    background-color: black;
-    color: red;
-    position: absolute;
-    right: 0;
-    margin-top: 200px;
-    padding: 20px;
-  }
+p {
+  background-color: black;
+  color: white;
+  text-align: right;
+  margin-top: 100px;
   
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.character-item {
+  margin: 10px;
+}
+
+.character-thumbnail {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.selected-team {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.selected-character {
+  margin: 10px;
+}
+
+.character-details {
+  margin-top: 20px;
+  text-align: center;
+}
+
+Styling for the selected thumbnail /
+.selected-thumbnail {
+  text-align: center;
+  
+}
+
+.selected-thumbnail img {
+ width: 15%; 
+  /* Make the thumbnail 75% smaller */
+  display: block;
+  margin: 0 auto; 
+  /* Center the thumbnail horizontally */
+}
+
+/* Styling for the title of the selected team */
+.selected-team-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
