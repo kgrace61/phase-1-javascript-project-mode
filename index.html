@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVE THE UNIVERSE!</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script defer type="module" src="./index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>SAVE THE UNIVERSE!</h1>
+        <p>Wubba Lubba Dub Dub! The universe is under attack! Space Monsters are destroying the universe one planet at a time. Rick & Morty & company are our last hope to save us all! Assemble a team of 5 characters that will help preserve life as we know it! or else..</p>
+    </header>
+    <table>
+        <tr>
+          <td class="name">Name: </td>
+          <td class="value" id="insertName">Insert Name</td>
+          <td class="status">Status: </td>
+          <td class="value" id="insertStatus">Insert Status</td>
+        </tr>
+        <tr>
+          <td class="species">Species: </td>
+          <td class="value" id="insertSpecies">Insert Species</td>
+          <td class="type">Type: </td>
+          <td class="value" id="insertType">Insert Type</td>
+        </tr>
+        <tr>
+          <td class="gender">Gender: </td>
+          <td class="value" id="insertValue">Insert Gender</td>
+          <td class="origin">Origin: </td>
+          <td class="value" id="insertOrigin">Insert Origin</td>
+        </tr>
+        <tr>
+          <td class="location">Location:</td>
+          <td class="value" id="insertLocation">Insert Location</td>
+        </tr>
+      </table>
+    
+
+      <div class="buttons" id="buttonss">
+        <button class="btn" onclick="one()">1</button>
+        <button class="btn active" onclick="two()">2</button>
+      </div>
+      <!--container for displaying character details at the top-->
+      <div id="display-container" class="display-container"></div> 
+      <div id="character-details" class="character-details"></div>
+      <!-- container for displaying selected character thumbnail-->
+      <div id="selected-thumbnail" class="selected-thumbnail"></div>
+      <!-- container for the selected characters displayed in a row-->
+      <div id="selected-team" class="selected-team"></div>
+      <!-- container for character list displayed in columns and rows-->
+      <div class="container">
+        <div id="character-list" class="character-list"></div>
+      </div>
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rick and Morty Character Selector</title>
+        <link rel="stylesheet" href="styles.css">
+      </head>
+      <body>
+        <!-- Container for displaying character details at the top -->
+        <div id="display-container" class="display-container">
+          <div id="character-details" class="character-details"></div>
+          <div id="selected-thumbnail" class="selected-thumbnail"></div> <!-- Container for displaying selected character thumbnail -->
+        </div>
+      
+        <!-- Container for the selected characters displayed in a row -->
+        <div id="selected-team" class="selected-team"></div>
+        
+        <!-- Container for character list displayed in columns and rows -->
+        <div class="container">
+          <div id="character-list" class="character-list"></div>
+        </div>
+      
+        <script src="index.js"></script>
+     
+</body>
+</html>

@@ -1,11 +1,3 @@
-<!-- A one sentence description of your app
-A SCREENSHOT of your wireframe
-User stories
-An example of your db.json or what API you are going to use
-What 3 unique event listeners you will use
-How you will be using array iteration
-A Kanban board : of all the tasks the steps were going to take to implement each element of the page -->
-
 SAVE THE UNIVERSE is an app to assemble a team of Rick & Morty characters to save the universe from Space Monsters.
 
 WIREFRAME/STYLE GUIDE:
@@ -98,3 +90,4 @@ Stretch Deliverables:
 
 Kanban Board: 
 <img src="KanbanBoard.png">
+credit: Trello
