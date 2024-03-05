@@ -1,126 +1,148 @@
+// This event listener ensures that the code inside it runs only after the HTML document has been fully loaded.
 document.addEventListener('DOMContentLoaded', function() {
-    const characterList = document.getElementById('character-list'); 
-    const selectedTeam = document.getElementById('selected-team'); 
-    const characterDetails = document.getElementById('character-details'); 
-    const selectedThumbnail = document.getElementById('selected-thumbnail'); 
-    let selectedCharacters = []; 
+    // These variables store references to specific elements in the HTML document using their IDs.
+    const characterList = document.getElementById('character-list'); // Reference to the character list container
+    const selectedTeam = document.getElementById('selected-team'); // Reference to the selected team container
+    const characterDetails = document.getElementById('character-details'); // Reference to the character details container
+    const selectedThumbnail = document.getElementById('selected-thumbnail'); // Reference to the selected thumbnail container
+    let selectedCharacters = []; // Array to store selected characters
 
-    const selectedTeamTitle = document.createElement('div'); 
-    selectedTeamTitle.textContent = 'YOUR SELECTED TEAM'; 
-    selectedTeamTitle.classList.add('selected-team-title'); 
-    selectedTeam.appendChild(selectedTeamTitle); 
+    // Adding a title to the selected characters box
+    const selectedTeamTitle = document.createElement('div'); // Create a div element for the selected team title
+    selectedTeamTitle.textContent = 'YOUR SELECTED TEAM'; // Set the text content of the title
+    selectedTeamTitle.classList.add('selected-team-title'); // Add a CSS class to the title element
+    selectedTeam.appendChild(selectedTeamTitle); // Append the title to the selected team container
 
+    // Fetch data from 'db.json' and process it
     fetch('db.json')
-      .then(response => response.json()) 
-      .then(data => { 
-        window.characterData = data;
-        renderCharacterList(data.chars);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error); 
-      });
+        .then(response => response.json()) // Convert the fetched response to JSON format
+        .then(data => { // Once the JSON data is retrieved, this function processes it
+            window.characterData = data; // Store the character data in a global variable for later use
+            renderCharacterList(data.chars); // Render the character list
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error); // Log any errors that may occur during the fetch process
+        });
 
+    // Reference to the search box
     const searchBox = document.getElementById('searchBox');
 
+    // Add event listener for input in the search box
     searchBox.addEventListener('input', function() {
-        const searchTerm = searchBox.value.toLowerCase(); 
-        const filteredCharacters = window.characterData.chars.filter(character => character.name.toLowerCase().includes(searchTerm)); 
-        renderCharacterList(filteredCharacters); 
+        const searchTerm = searchBox.value.toLowerCase(); // Get the search term and convert to lowercase for case-insensitive search
+        const filteredCharacters = window.characterData.chars.filter(character => character.name.toLowerCase().includes(searchTerm)); // Filter characters based on search term
+        renderCharacterList(filteredCharacters); // Render the filtered character list
     });
 
+    // Function to render the character list
     function renderCharacterList(characters) {
-        characterList.innerHTML = '';
+        characterList.innerHTML = ''; // Clear the existing character list
 
-        characters.forEach(character => {
-            const characterItem = document.createElement('div'); 
-            characterItem.classList.add('character-item'); 
+        characters.forEach(character => { // Iterate over each character to render them
+            const characterItem = document.createElement('div'); // Create a container for each character in the list
+            characterItem.classList.add('character-item'); // Add a CSS class to the character container
 
-            const characterThumbnail = document.createElement('img'); 
-            characterThumbnail.src = character.image; 
-            characterThumbnail.alt = character.name; 
-            characterThumbnail.classList.add('character-thumbnail'); 
+            const characterThumbnail = document.createElement('img'); // Create an image element for the character thumbnail
+            characterThumbnail.src = character.image; // Set the image source
+            characterThumbnail.alt = character.name; // Set the alt attribute
+            characterThumbnail.classList.add('character-thumbnail'); // Add a CSS class to the thumbnail image
 
+            // Add an event listener to the thumbnail image to display character details and thumbnail when clicked
             characterThumbnail.addEventListener('click', () => {
-                displayCharacterDetails(character);
-                displayThumbnail(character);
+                displayCharacterDetails(character); // Display character details
+                displayThumbnail(character); // Display character thumbnail
             });
 
-            const addToTeamBtn = document.createElement('button'); 
-            addToTeamBtn.textContent = 'Add to Team'; 
-            addToTeamBtn.addEventListener('click', () => addToTeam(character));
+            const addToTeamBtn = document.createElement('button'); // Create a button to add the character to the user's team
+            addToTeamBtn.textContent = 'Add to Team'; // Set the button text content
+            // Add an event listener to the button to add the character to the team when clicked
+            addToTeamBtn.addEventListener('click', () => addToTeam(character)); // Call addToTeam function
 
+            // Append the thumbnail image and 'Add to Team' button to the character container
             characterItem.appendChild(characterThumbnail);
             characterItem.appendChild(addToTeamBtn);
+            // Append the character container to the character list in the HTML document
             characterList.appendChild(characterItem);
         });
     }
 
+    // This function displays the details of a selected character.
     function displayCharacterDetails(character) {
-     document.getElementById('insertName').textContent = character.name;
-     document.getElementById('insertStatus').textContent = character.status;
-     document.getElementById('insertSpecies').textContent = character.species;
-     document.getElementById('insertType').textContent = character.type || 'N/A';
-     document.getElementById('insertGender').textContent = character.gender;
-     document.getElementById('insertOrigin').textContent = character.origin.name;
-     document.getElementById('insertLocation').textContent = character.location.name;
+        // Update the content of the table with character information
+        document.getElementById('insertName').textContent = character.name;
+        document.getElementById('insertStatus').textContent = character.status;
+        document.getElementById('insertSpecies').textContent = character.species;
+        document.getElementById('insertType').textContent = character.type || 'N/A';
+        document.getElementById('insertGender').textContent = character.gender;
+        document.getElementById('insertOrigin').textContent = character.origin.name;
+        document.getElementById('insertLocation').textContent = character.location.name;
     }
-  
+
+    // This function adds a character to the user's team.
     function addToTeam(character) {
-      if (selectedCharacters.length >= 5) { 
-        alert('You can only select up to 5 characters for your team.'); 
-        return; 
-      }
-  
-      const existsInTeam = selectedCharacters.some(char => char.id === character.id); 
-      if (existsInTeam) {
-        alert('This character is already in your team.'); 
-        return; 
-      }
-  
-      const characterToAdd = { id: character.id, name: character.name, image: character.image };
-      selectedCharacters.push(characterToAdd);
-  
-      renderSelectedTeam(); 
+        if (selectedCharacters.length >= 5) { // Check if the team already has 5 characters
+            alert('You can only select up to 5 characters for your team.'); // Display an alert if the team is full
+            return; // Exit the function
+        }
+
+        const existsInTeam = selectedCharacters.some(char => char.id === character.id); // Check if the selected character is already in the team
+        if (existsInTeam) {
+            alert('This character is already in your team.'); // Display an alert if the character is already in the team
+            return; // Exit the function
+        }
+
+        // If the character is not already in the team, add it to the team array
+        const characterToAdd = { id: character.id, name: character.name, image: character.image };
+        selectedCharacters.push(characterToAdd);
+
+        renderSelectedTeam(); // Call the function to render the updated team
     }
-  
+
+    // This function removes a character from the user's team.
     function removeFromTeam(characterId) {
-      selectedCharacters = selectedCharacters.filter(char => char.id !== characterId); 
-      renderSelectedTeam(); 
+        selectedCharacters = selectedCharacters.filter(char => char.id !== characterId); // Remove the character with the specified ID from the team
+        renderSelectedTeam(); // Call the function to render the updated team
     }
-  
+
+    // This function renders the selected team in the HTML document.
     function renderSelectedTeam() {
-      selectedTeam.innerHTML = ''; 
-      selectedCharacters.forEach(character => { 
-        const selectedCharacter = document.createElement('div'); 
-        selectedCharacter.classList.add('selected-character'); 
-  
-        const characterThumbnail = document.createElement('img'); 
-        characterThumbnail.src = character.image; 
-        characterThumbnail.alt = character.name; 
-  
-        const removeBtn = document.createElement('button'); 
-        removeBtn.textContent = 'Remove'; 
-        removeBtn.addEventListener('click', () => removeFromTeam(character.id)); 
-  
-        selectedCharacter.appendChild(characterThumbnail);
-        selectedCharacter.appendChild(removeBtn);
-        selectedTeam.appendChild(selectedCharacter);
-      });
+        selectedTeam.innerHTML = ''; // Clear the selected team section in the HTML
+        selectedCharacters.forEach(character => { // Iterate over each character in the selected team
+            const selectedCharacter = document.createElement('div'); // Create a container for the selected character
+            selectedCharacter.classList.add('selected-character'); // Add a CSS class to the selected character container
+
+            const characterThumbnail = document.createElement('img'); // Create an image element to display the character thumbnail
+            characterThumbnail.src = character.image; // Set the image source
+            characterThumbnail.alt = character.name; // Set the alt attribute
+
+            const removeBtn = document.createElement('button'); // Create a button to remove the character from the team
+            removeBtn.textContent = 'Remove'; // Set the button text content
+            removeBtn.addEventListener('click', () => removeFromTeam(character.id)); // Add an event listener to the button to remove the character from the team when clicked
+
+            // Append the thumbnail image and 'Remove' button to the selected character container
+            selectedCharacter.appendChild(characterThumbnail);
+            selectedCharacter.appendChild(removeBtn);
+            // Append the selected character container to the selected team section in the HTML document
+            selectedTeam.appendChild(selectedCharacter);
+        });
     }
-  
+
+    // This function displays the clicked character thumbnail.
     function displayThumbnail(character) {
-      selectedThumbnail.innerHTML = ''; 
-      const clickedCharacterThumbnail = document.createElement('img'); 
-      clickedCharacterThumbnail.src = character.image; 
-      clickedCharacterThumbnail.alt = character.name; 
-      selectedThumbnail.appendChild(clickedCharacterThumbnail); 
+        selectedThumbnail.innerHTML = ''; // Clear previous contents
+        const clickedCharacterThumbnail = document.createElement('img'); // Create an image element for the clicked character thumbnail
+        clickedCharacterThumbnail.src = character.image; // Set the image source
+        clickedCharacterThumbnail.alt = character.name; // Set the alt attribute
+        selectedThumbnail.appendChild(clickedCharacterThumbnail); // Append clicked thumbnail to the selected thumbnail container
     }
-  
+
+    // This function clears the character details section in the HTML document and the selected thumbnail.
     function resetCharacterDetails() {
-      characterDetails.innerHTML = ''; 
-      selectedThumbnail.innerHTML = ''; 
+        characterDetails.innerHTML = ''; // Clear the character details section in the HTML
+        selectedThumbnail.innerHTML = ''; // Clear the selected thumbnail container
     }
-  
+
+    // Call resetCharacterDetails to clear details on load
     resetCharacterDetails();
 
 });
