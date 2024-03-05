@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
             displayCharacterDetails(character);
             displayThumbnail(character);
           });
+
+        // Add onmouseover event to display full name as tooltip
+        characterThumbnail.addEventListener('mouseover', () => {
+            characterThumbnail.title = character.name;
+        });
   
           const addToTeamBtn = document.createElement('button'); // Create a button to add the character to the user's team
           addToTeamBtn.textContent = 'Add to Team'; // Set the button text content
