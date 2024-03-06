@@ -1,8 +1,4 @@
 // This event listener ensures that the code inside it runs only after the HTML document has been fully loaded.selectedTeamTitle
-//THINGS THAT MIGHT CHANGE~
-const characterItem = document.createElement('div'); // Create a container for each character in the list
-        characterItem.classList.add('character-item'); // Add a CSS class to the character container
-
 document.addEventListener('DOMContentLoaded', function() {
   // These variables store references to specific elements in the HTML document using their IDs.
   const characterList = document.getElementById('character-list'); // Reference to the character list container

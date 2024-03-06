@@ -6,14 +6,7 @@
   font-family: irishgrover;
   src: url(irishgrover.ttf)
 }
-@font-face {
-  font-family: GetSchwifty;
-  src: url(get_schwifty.ttf);
-}
-@font-face {
-  font-family: irishgrover;
-  src: url(irishgrover.ttf)
-}
+
 body {
     font-family: irishgrover, sans-serif;
     margin: 0;
@@ -26,19 +19,14 @@ body {
 
 h1 {
   font-family: GetSchwifty;
-  font-family: GetSchwifty;
+  font-size: 60px;
   padding: 10px;
-  width: 300px;
-  border: 1px solid green;
-  margin: 20px;
-  text-align: center;
+  width: 500px;
   border: 1px solid green;
   margin: 20px;
   text-align: center;
   color: greenyellow;
   background-color: black;
-  position: absolute;
-  right: calc(0.5in - 10px);
   position: absolute;
   right: calc(0.5in - 10px);
   top: 0;
@@ -55,20 +43,13 @@ table {
 
 p {
   font-family: irishgrover;
-  padding: 10px;
-  width: 390px;
+  width: 450px;
   border: 1px solid green;
-  font-family: irishgrover;
   padding: 10px;
-  width: 390px;
-  border: 1px solid green;
   background-color: black;
   color: white;
   text-align: right;
-  margin-top: 100px;
-  position: absolute;
-  right: calc(0.5in - 10px);
-  top: 0;
+  margin-top: 150px;
   position: absolute;
   right: calc(0.5in - 10px);
   top: 0;
@@ -126,26 +107,15 @@ p {
 
 .selected-team {
   border: 4px solid black;
+  padding: 10px;
+  margin-top: 150px;
+  margin-left: 30px;
   width: 1500px;
   height: 350px;
   background-color: light bisque;
-  margin-top: 150px;
-  padding: 10px;
-  margin-left: 30px;
-  overflow: auto;
-  border: 4px solid black;
-  width: 1500px;
-  height: 350px;
-  background-color: light bisque;
-  margin-top: 150px;
-  padding: 10px;
-  margin-left: 30px;
   overflow: auto;
   display: flex;
   justify-content: space-between;
-
-  justify-content: space-between;
-
 }
 
 .selected-character {
@@ -155,10 +125,6 @@ p {
   width: 100px;
   height: auto;
   flex: 0 0 10%;
-}
-.selected character img {
-  width: 100px;
-  height: auto;
 }
 
 .character-details {
@@ -182,8 +148,6 @@ p {
   display: block;
   margin: 0 00 0 150px; 
   margin-top: 200px;
-  margin: 0 00 0 150px; 
-  margin-top: 200px;
   /* Center the thumbnail horizontally */
   border: 4px solid blue; /* Add border style */
 }
@@ -199,20 +163,6 @@ p {
   color: rgb(217, 57, 78)
 }
 
-.submit-box {
-  margin-top: 20px;
-}
-#submit-box {
-  position: relative; 
-  display: inline-block;
-  
-}
-
-
- 
-
-
-
 
 .buttons {
     position: fixed; /* Change from absolute to fixed */
@@ -224,7 +174,6 @@ p {
 
 .btn {
     width: 80px; /* Adjust width as needed */
-    height: 80px; /* Adjust height as needed */
     margin: 0 10px; /* Add some horizontal spacing between buttons */
     background-color: rgb(97, 240, 53); /* Change the background color */
     border: 4px solid blue; /* Change the border color, style, and width */
@@ -240,21 +189,17 @@ p {
 .submit-box {
   margin-top: 20px;
   font-family: GetSchwifty;
-
 }
+
 #submit-box {
   position: relative; 
   display: inline-block;
   font-family: GetSchwifty; 
-  
 }
+
 .submit-team-name {
     color: rgb(230, 238, 228); font-size: 17px; line-height: 17px; padding: 3px; border-radius: 7px; font-family: GetSchwifty, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(64, 170, 240) 0%, rgb(35, 203, 55) 50%, rgb(222, 27, 228) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
     .myButton:hover {
     background: #77ef52; }
     .myButton:active {
     background: #53de30; }
-
- 
-
-
