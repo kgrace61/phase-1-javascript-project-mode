@@ -4,12 +4,13 @@ body {
   background-image: url('https://cdn.europosters.eu/image/1300/art-photo/rick-and-morty-space-i115643.jpg');
   padding: 0;
 }
+
 h1 {
   font-family: cursive;
   padding: 10px;
   width: 300px;
   border: 15px solid green;
-  margin 20px;
+  margin: 20px;
   text-align: right;
   color: greenyellow;
   background-color: black;
@@ -27,22 +28,27 @@ table {
 }
 
 p {
-  background-color: black;
-  color: white;
-  text-align: right;
-  margin-top: 100px;
-  
-}
+    background-color: black;
+    color: white;
+    text-align: center; /* Center the text */
+    margin: 100px auto 0; /* Center the element vertically and set left/right margins to 'auto' to horizontally center */
+    max-width: 80%; /* Set maximum width to 80% of the viewport */
+    padding: 40px; /* Add padding to the element */
+    font-size: 30px; /* Increase font size */
+  }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 100vh; /* Set container height to 100% of viewport height */
 }
 
 .character-list {
-  display: flex;
-  flex-wrap: wrap;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-gap: 10px; /* Spacing between items */
+    justify-content: center; /* Center items horizontally */
 }
 
 .character-item {
@@ -50,9 +56,10 @@ p {
 }
 
 .character-thumbnail {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   cursor: pointer;
+  border: 8px solid black; /* Add border style */
 }
 
 .selected-team {
@@ -71,10 +78,13 @@ p {
   text-align: center;
 }
 
-Styling for the selected thumbnail /
+#character-details-table {
+    display: none; /* Hide the table by default */
+  }
+
+/* Styling for the selected thumbnail */
 .selected-thumbnail {
   text-align: center;
-  
 }
 
 .selected-thumbnail img {
@@ -83,6 +93,7 @@ Styling for the selected thumbnail /
   display: block;
   margin: 0 auto; 
   /* Center the thumbnail horizontally */
+  border: 10px solid black; /* Add border style */
 }
 
 /* Styling for the title of the selected team */
@@ -91,4 +102,23 @@ Styling for the selected thumbnail /
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
+}
+
+.buttons {
+    position: absolute;
+    top: 100%; /* Center vertically */
+    left: 48.5%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the element */
+}
+
+.btn {
+    width: 80px; /* Adjust width as needed */
+    height: 80px; /* Adjust height as needed */
+    margin-top: 20px; /* Adjust this value to move the buttons down */
+    background-color: rgb(97, 240, 53); /* Change the background color */
+    border: 4px solid blue; /* Change the border color, style, and width */
+    color: red; /* Change the font color */
+    font-size: 20px; /* Change the font size */
+    font-family: cursive;
+    font-weight: bold; /* Make the font thicker */
 }

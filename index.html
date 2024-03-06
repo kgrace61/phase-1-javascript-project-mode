@@ -12,7 +12,7 @@
         <h1>SAVE THE UNIVERSE!</h1>
         <p>Wubba Lubba Dub Dub! The universe is under attack! Space Monsters are destroying the universe one planet at a time. Rick & Morty & company are our last hope to save us all! Assemble a team of 5 characters that will help preserve life as we know it! or else..</p>
     </header>
-    <table>
+    <table id="character-details-table">
         <tr>
           <td class="name">Name: </td>
           <td class="value" id="insertName">Insert Name</td>
@@ -39,8 +39,10 @@
     
 
       <div class="buttons" id="buttons">
-        <button class="btn" onclick="one()">1</button>
-        <button class="btn active" onclick="two()">2</button>
+        <button class="btn active" id="page-1">1</button>
+        <button class="btn" id="page-2">2</button>
+        <button class="btn" id="page-3">3</button>
+        <button class="btn" id="page-4">4</button>
       </div>
       <!--container for displaying character details at the top-->
       <div id="display-container" class="display-container"></div> 
