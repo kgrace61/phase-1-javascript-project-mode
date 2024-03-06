@@ -29,9 +29,10 @@ table {
   background-color: black;
   color: red;
   position: absolute;
-  right: 0;
+  right: calc(1.5in - 10px);
   margin-top: 300px;
   padding: 20px;
+  width:500px;
 }
 
 p {
@@ -50,7 +51,7 @@ p {
 }
 
 .container {
-  margin-top: 300px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -76,18 +77,25 @@ p {
 }
 
 .selected-team {
-  border: 2px solid black;
-  width: 1400px;
-  margin-top: 300px;
+  border: 4px solid black;
+  width: 1500px;
+  height: 350px;
+  background-color: light bisque;
+  margin-top: 150px;
   padding: 10px;
+  margin-left: 30px;
+  overflow: auto;
   display: flex;
   justify-content: space-between;
-  
 
 }
 
 .selected-character {
-  flex: 0 0 18%;
+  flex: 0 0 10%;
+}
+.selected character img {
+  width: 100px;
+  height: auto;
 }
 
 .character-details {
@@ -98,14 +106,15 @@ p {
 Styling for the selected thumbnail /
 .selected-thumbnail {
   text-align: center;
-  
+  margin-top: 300px;
 }
 
 .selected-thumbnail img {
- width: 15%; 
+ width: 25%; 
   /* Make the thumbnail 75% smaller */
   display: block;
-  margin: 0 auto; 
+  margin: 0 00 0 150px; 
+  margin-top: 200px;
   /* Center the thumbnail horizontally */
 }
 
@@ -115,9 +124,19 @@ Styling for the selected thumbnail /
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
+  font-color: white;
 }
 
-table{
-  margin-top: 400px;
+.submit-box {
+  margin-top: 20px;
 }
+#submit-box {
+  position: relative; 
+  display: inline-block;
+  
+}
+
+
+ 
+
 

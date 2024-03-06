@@ -7,11 +7,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectedThumbnail = document.getElementById('selected-thumbnail'); // Reference to the selected thumbnail container
     let selectedCharacters = []; // Array to store selected characters
   
-    // Adding a title to the selected characters box
-    const selectedTeamTitle = document.createElement('div'); // Create a div element for the selected team title
-    selectedTeamTitle.textContent = 'YOUR SELECTED TEAM'; // Set the text content of the title
-    selectedTeamTitle.classList.add('selected-team-title'); // Add a CSS class to the title element
-    selectedTeam.appendChild(selectedTeamTitle); // Append the title to the selected team container
+     // Adding a title to the selected characters box
+     const selectedTeamTitle = document.createElement('div'); // Create a div element for the selected team title
+     selectedTeamTitle.textContent = 'NAME YOUR SQUAD!'; // Set the text content of the title
+     selectedTeamTitle.classList.add('selected-team-title'); // Add a CSS class to the title element
+     selectedTeam.appendChild(selectedTeamTitle); // Append the title to the selected team container
+    
+    // Function to submit team name
+    const submitButton = document.getElementById('submit-team-name')
+
+    submitButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        submitTeamName()
+    })
+    
+
+  function submitTeamName() {
+    const teamNameInput = document.getElementById('team-name-input');
+    const newTeamName = teamNameInput.value
+    if (newTeamName !== '') {
+        selectedTeamTitle.textContent = newTeamName;
+    } else {
+        alert('Please enter a valid squad name.');
+    }
+}
   
     // Fetch data from 'db.json' and process it
     fetch('db.json')
@@ -88,7 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // This function renders the selected team in the HTML document.
     function renderSelectedTeam() {
-      selectedTeam.innerHTML = ''; // Clear the selected team section in the HTML
+       // Clear the selected team container
+        selectedTeam.innerHTML = '';
+
+
       selectedCharacters.forEach(character => { // Iterate over each character in the selected team
         const selectedCharacter = document.createElement('div'); // Create a container for the selected character
         selectedCharacter.classList.add('selected-character'); // Add a CSS class to the selected character container
@@ -98,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         characterThumbnail.alt = character.name; // Set the alt attribute
   
         const removeBtn = document.createElement('button'); // Create a button to remove the character from the team
-        removeBtn.textContent = 'Remove'; // Set the button text content
+        removeBtn.textContent = 'X'; // Set the button text content
         removeBtn.addEventListener('click', () => removeFromTeam(character.id)); // Add an event listener to the button to remove the character from the team when clicked
   
         // Append the thumbnail image and 'Remove' button to the selected character container
@@ -108,15 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedTeam.appendChild(selectedCharacter);
 
       });
-      function submitTeamName() {
-        const teamNameInput = document.getElementById('team-name-input');
-        const newTeamName = teamNameInput.value;
-        if (newTeamName.trim() !== '') {
-            selectedTeamTitle.textContent = newTeamName;
-        } else {
-            alert('Please enter a valid team name.');
-        }
-    }
+
     
     }
   
