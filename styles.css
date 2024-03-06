@@ -122,8 +122,8 @@ p {
 .selected-character {
   flex: 0 0 10%;
 }
-.selected character img {
-  width: 100px;
+.selected-character img {
+  width: 190px;
   height: auto;
   flex: 0 0 10%;
 }
@@ -135,12 +135,17 @@ p {
 
 #character-details-table {
     display: none; /* Hide the table by default */
+    position: absolute; /* Position the table relative to its containing element */
+    top: 30%; /* Position from the top edge of the containing element */
+    left: calc(50% + 20px);
+    transform: translate(-50%, -50%); /* Center the table horizontally and vertically */
+    font-size: 18px;
   }
 
 /* Styling for the selected thumbnail */
 .selected-thumbnail {
   text-align: center;
-  margin-top: 300px;
+  margin-top: 100px;
 }
 
 .selected-thumbnail img {
@@ -148,7 +153,7 @@ p {
   /* Make the thumbnail 75% smaller */
   display: block;
   margin: 0 00 0 150px; 
-  margin-top: 200px;
+  margin-top: 100px;
   /* Center the thumbnail horizontally */
   border: 4px solid blue; /* Add border style */
 }
@@ -161,7 +166,8 @@ p {
   margin-bottom: 10px;
   z-index: 1000;
   top: 180px;
-  color: rgb(217, 57, 78)
+  color: #FFFFFF;
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
 }
 
 
@@ -218,3 +224,16 @@ p {
     outline: none;
     border-color: #66afe9;
     }
+    .addToTeamButton {
+      color: rgb(230, 238, 228); font-size: 17px; line-height: 17px; padding: 3px; border-radius: 7px; font-family: GetSchwifty, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(52, 58, 235) 0%, rgb(35, 203, 55) 50%, rgb(222, 27, 228) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
+      .myButton:hover {
+      background: #77ef52; }
+      .myButton:active {
+      background: #53de30; }
+
+      .removeBtn {color: rgb(230, 238, 228); font-size: 17px; line-height: 17px; padding: 3px; border-radius: 7px; font-family: GetSchwifty, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(52, 58, 235) 0%, rgb(35, 203, 55) 50%, rgb(222, 27, 228) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
+      .myButton:hover {
+      background: #77ef52; }
+      .myButton:active {
+      background: #53de30; }
+      

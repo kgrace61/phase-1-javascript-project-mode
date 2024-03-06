@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
           });
 
           const addToTeamBtn = document.createElement('button'); // Create a button to add the character to the user's team
+          addToTeamBtn.classList.add('addToTeamButton')
           addToTeamBtn.textContent = 'Add to Team'; // Set the button text content
           addToTeamBtn.addEventListener('click', () => addToTeam(character)); // Add an event listener to the button to add the character to the team when clicked
 
@@ -144,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           const removeBtn = document.createElement('button'); // Create a button to remove the character from the team
           removeBtn.textContent = 'X'; // Set the button text content
+          removeBtn.classList.add('removeBtn'); // Add a CSS class to the remove button
           removeBtn.addEventListener('click', () => removeFromTeam(character.id)); // Add an event listener to the button to remove the character from the team when clicked
 
           // Append the thumbnail image and 'Remove' button to the selected character container
