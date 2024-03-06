@@ -124,7 +124,9 @@ Styling for the selected thumbnail /
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
-  font-color: white;
+  z-index: 1000;
+  top: 180px;
+  color: rgb(217, 57, 78)
 }
 
 .submit-box {
