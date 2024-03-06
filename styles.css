@@ -1,8 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-image: url('https://cdn.europosters.eu/image/1300/art-photo/rick-and-morty-space-i115643.jpg');
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('https://cdn.europosters.eu/image/1300/art-photo/rick-and-morty-space-i115643.jpg');
+    background-attachment: fixed; /* Make the background image fixed */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-size: cover; /* Cover the entire viewport with the background image */
+    padding: 0;
 }
 
 h1 {
@@ -22,7 +25,7 @@ table {
   background-color: black;
   color: red;
   position: absolute;
-  right: 0;
+  right: 10;
   margin-top: 200px;
   padding: 20px;
 }
@@ -49,6 +52,8 @@ p {
     grid-template-columns: repeat(5, 1fr); /* 5 columns */
     grid-gap: 10px; /* Spacing between items */
     justify-content: center; /* Center items horizontally */
+    margin-top: -500px; /* Adjust the margin-top value to move the images up */
+    border: 10px solid rgb(97, 240, 53);; /* Add border style to the container */
 }
 
 .character-item {
@@ -59,7 +64,23 @@ p {
   width: 250px;
   height: 250px;
   cursor: pointer;
-  border: 8px solid black; /* Add border style */
+  border: 4px solid blue; /* Add border style */
+  border-radius: 50%; /* Make the border radius 50% of the width/height to create a circle */
+  transition: transform 0.3s ease; /* Add transition for smooth sliding effect */
+}
+
+.character-thumbnail:hover {
+  transform: scale(1.1); /* Scale the image on hover to create a slide effect */
+  border-color:rgb(97, 240, 53); /* Change border color on hover */
+}
+
+@keyframes border-animation {
+    from {
+        border-width: 2px;
+    }
+    to {
+        border-width: 10px;
+    }
 }
 
 .selected-team {
@@ -93,7 +114,7 @@ p {
   display: block;
   margin: 0 auto; 
   /* Center the thumbnail horizontally */
-  border: 10px solid black; /* Add border style */
+  border: 4px solid blue; /* Add border style */
 }
 
 /* Styling for the title of the selected team */
@@ -105,16 +126,17 @@ p {
 }
 
 .buttons {
-    position: absolute;
-    top: 100%; /* Center vertically */
-    left: 48.5%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center the element */
+    position: fixed; /* Change from absolute to fixed */
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    left: 48.81%;
+    transform: translateX(-50%);
+    z-index: 1; /* Ensure the buttons are above other elements */
 }
 
 .btn {
     width: 80px; /* Adjust width as needed */
     height: 80px; /* Adjust height as needed */
-    margin-top: 20px; /* Adjust this value to move the buttons down */
+    margin: 0 10px; /* Add some horizontal spacing between buttons */
     background-color: rgb(97, 240, 53); /* Change the background color */
     border: 4px solid blue; /* Change the border color, style, and width */
     color: red; /* Change the font color */
