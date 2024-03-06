@@ -27,7 +27,7 @@ h1 {
 }
 table {
   background-color: black;
-  color: red;
+  color: green ;
   position: absolute;
   right: calc(1.5in - 10px);
   margin-top: 300px;
@@ -103,7 +103,7 @@ p {
   text-align: center;
 }
 
-Styling for the selected thumbnail /
+/*Styling for the selected thumbnail */
 .selected-thumbnail {
   text-align: center;
   margin-top: 300px;

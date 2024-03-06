@@ -1,4 +1,8 @@
 // This event listener ensures that the code inside it runs only after the HTML document has been fully loaded.selectedTeamTitle
+//THINGS THAT MIGHT CHANGE~
+const characterItem = document.createElement('div'); // Create a container for each character in the list
+        characterItem.classList.add('character-item'); // Add a CSS class to the character container
+
 document.addEventListener('DOMContentLoaded', function() {
   // These variables store references to specific elements in the HTML document using their IDs.
   const characterList = document.getElementById('character-list'); // Reference to the character list container
@@ -6,26 +10,25 @@ document.addEventListener('DOMContentLoaded', function() {
   const characterDetails = document.getElementById('character-details'); // Reference to the character details container
   const selectedThumbnail = document.getElementById('selected-thumbnail'); // Reference to the selected thumbnail container
   let selectedCharacters = []; // Array to store selected characters
+  const charactersPerPage = 20; // Number of characters to display per page
+    let currentPage = 1; // Current page number
 
+  // adding a title to selected character box
+const selectedTeamTitle = document.createElement('div');
+selectedTeamTitle.style.position = 'absolute';
+selectedTeamTitle.style.zIndex = '10';
+selectedTeamTitle.innerHTML = 'NAME YOUR SQUAD!';
+selectedTeamTitle.classList.add('selected-team-title');
+selectedTeam.appendChild(selectedTeamTitle);
+ 
+// Function to submit team name
+ const submitButton = document.getElementById('submit-team-name')
+ submitButton.classList.add('submit-team-name'); // Add a CSS class to the submit button
 
-   // Adding a title to the selected characters box
-   const selectedTeamTitle = document.createElement('div'); // Create a div element for the selected team title
-   selectedTeamTitle.style.position = 'absolute'; // z-index only works on positioned elements
-   selectedTeamTitle.style.zIndex = '10'; 
-   selectedTeamTitle.textContent = 'NAME YOUR SQUAD!'; // Set the text content of the title
-   selectedTeamTitle.classList.add('selected-team-title'); // Add a CSS class to the title element
-   selectedTeam.appendChild(selectedTeamTitle); // Append the title to the selected team container
-  
-  // Function to submit team name
-  const submitButton = document.getElementById('submit-team-name')
-  submitButton.classList.add('submit-team-name'); // Add a CSS class to the submit button
-
-  submitButton.addEventListener('click', function(event) {
-      event.preventDefault();
-      submitTeamName()
-  })
-  
-
+ submitButton.addEventListener('click', function(event) {
+     event.preventDefault();
+     submitTeamName()
+ })
 function submitTeamName() {
   const teamNameInput = document.getElementById('team-name-input');
   const newTeamName = teamNameInput.value
@@ -35,25 +38,50 @@ function submitTeamName() {
       alert('Please enter a valid squad name.');
   }
 }
+// Reference to the search box
+const searchBox = document.getElementById('searchBox');
 
-  // Fetch data from 'db.json' and process it
+// Add event listener for input in the search box
+searchBox.addEventListener('input', function() {
+    const searchTerm = searchBox.value.toLowerCase(); // Get the search term and convert to lowercase for case-insensitive search
+    const filteredCharacters = window.characterData.chars.filter(character => character.name.toLowerCase().includes(searchTerm)); // Filter characters based on search term
+    renderCharacterList(filteredCharacters); // Render the filtered character list
+});
+
+function fetchCharacters() {
+  const startIndex = (currentPage - 1) * charactersPerPage;
+  const endIndex = startIndex + charactersPerPage;
   fetch('db.json')
-    .then(response => response.json()) // Convert the fetched response to JSON format
-    .then(data => { // Once the JSON data is retrieved, this function processes it
-      data.chars.forEach(character => { // Iterate over each character in the 'chars' array from the fetched data
-        const characterItem = document.createElement('div'); // Create a container for each character in the list
-        characterItem.classList.add('character-item'); // Add a CSS class to the character container
+      .then(response => response.json())
+      .then(data => {
+          const charactersToDisplay = data.chars.slice(startIndex, endIndex);
+          renderCharacterList(charactersToDisplay);
+      })
+      .catch(error => {
+          console.error('Error fetching data:', error);
+      });
+}
 
-        const characterThumbnail = document.createElement('img'); // Create an image element for the character thumbnail
-        characterThumbnail.src = character.image; // Set the image source
-        characterThumbnail.alt = character.name; // Set the alt attribute
-        characterThumbnail.classList.add('character-thumbnail'); // Add a CSS class to the thumbnail image
+function renderCharacterList(characters) {
+  characterList.innerHTML = '';
+  characters.forEach(character => {
+      const characterItem = document.createElement('div');
+      characterItem.classList.add('character-item');
 
-        // Add an event listener to the thumbnail image to display character details and thumbnail when clicked
-        characterThumbnail.addEventListener('click', () => {
+      const characterThumbnail = document.createElement('img');
+      characterThumbnail.src = character.image;
+      characterThumbnail.alt = character.name;
+      characterThumbnail.classList.add('character-thumbnail');
+
+      characterThumbnail.addEventListener('click', () => {
           displayCharacterDetails(character);
           displayThumbnail(character);
-        });
+      });
+
+      characterThumbnail.addEventListener('mouseover', () => {
+          characterThumbnail.title = character.name;
+      });
+      
 
         const addToTeamBtn = document.createElement('button'); // Create a button to add the character to the user's team
         addToTeamBtn.textContent = 'Add to Team'; // Set the button text content
@@ -66,11 +94,8 @@ function submitTeamName() {
         // Append the character container to the character list in the HTML document
         characterList.appendChild(characterItem);
       });
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error); // Log any errors that may occur during the fetch process
-    });
-
+    }
+  
   // This function displays the details of a selected character.
   function displayCharacterDetails(character) {
    //update the content of the table with character information
@@ -112,9 +137,7 @@ function submitTeamName() {
   // This function renders the selected team in the HTML document.
   function renderSelectedTeam() {
      // Clear the selected team container
-      selectedTeam.innerHTML = '';
-
-
+    selectedTeam.innerHTML = '';
     selectedCharacters.forEach(character => { // Iterate over each character in the selected team
       const selectedCharacter = document.createElement('div'); // Create a container for the selected character
       selectedCharacter.classList.add('selected-character'); // Add a CSS class to the selected character container
@@ -152,8 +175,19 @@ function submitTeamName() {
   function resetCharacterDetails() {
     characterDetails.innerHTML = ''; // Clear the character details section in the HTML
     selectedThumbnail.innerHTML = ''; // Clear the selected thumbnail container
-  }åg
+  }
 
+  function handlePagination(page) {
+    currentPage = page;
+    fetchCharacters();
+}
   // Call resetCharacterDetails to clear details on load
   resetCharacterDetails();
+  fetchCharacters();
+
+// Pagination buttons event listeners
+document.getElementById('page-1').addEventListener('click', () => handlePagination(1));
+document.getElementById('page-2').addEventListener('click', () => handlePagination(2));
+document.getElementById('page-3').addEventListener('click', () => handlePagination(3));
+document.getElementById('page-4').addEventListener('click', () => handlePagination(4));
 });
