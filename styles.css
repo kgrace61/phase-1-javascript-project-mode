@@ -203,3 +203,17 @@ p {
     background: #77ef52; }
     .myButton:active {
     background: #53de30; }
+    
+#searchBox {
+    width: 200px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    }
+    
+#searchBox:focus {
+    outline: none;
+    border-color: #66afe9;
+    }
