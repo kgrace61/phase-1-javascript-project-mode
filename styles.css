@@ -1,5 +1,13 @@
+@font-face {
+  font-family: GetSchwifty;
+  src: url(get_schwifty.ttf);
+}
+@font-face {
+  font-family: irishgrover;
+  src: url(irishgrover.ttf)
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: irishgrover, sans-serif;
     margin: 0;
     background-image: url('https://cdn.europosters.eu/image/1300/art-photo/rick-and-morty-space-i115643.jpg');
     background-attachment: fixed; /* Make the background image fixed */
@@ -9,16 +17,16 @@ body {
 }
 
 h1 {
-  font-family: cursive;
+  font-family: GetSchwifty;
   padding: 10px;
   width: 300px;
-  border: 15px solid green;
+  border: 1px solid green;
   margin: 20px;
-  text-align: right;
+  text-align: center;
   color: greenyellow;
   background-color: black;
-  position: fixed;
-  right: 0;
+  position: absolute;
+  right: calc(0.5in - 10px);
   top: 0;
 }
 table {
@@ -28,17 +36,23 @@ table {
   right: 10;
   margin-top: 200px;
   padding: 20px;
+  width:500px;
 }
 
 p {
-    background-color: black;
-    color: white;
-    text-align: center; /* Center the text */
-    margin: 100px auto 0; /* Center the element vertically and set left/right margins to 'auto' to horizontally center */
-    max-width: 80%; /* Set maximum width to 80% of the viewport */
-    padding: 40px; /* Add padding to the element */
-    font-size: 30px; /* Increase font size */
-  }
+  font-family: irishgrover;
+  padding: 10px;
+  width: 390px;
+  border: 1px solid green;
+  background-color: black;
+  color: white;
+  text-align: right;
+  margin-top: 100px;
+  position: absolute;
+  right: calc(0.5in - 10px);
+  top: 0;
+  
+}
 
 .container {
     display: flex; /* Use flexbox */
@@ -82,16 +96,31 @@ p {
         border-width: 10px;
     }
 }
+.character-thumbnail-small {
+  width: 125px;
+  height: 125px;
+}
 
 .selected-team {
-  margin-top: 20px;
+  border: 4px solid black;
+  width: 1500px;
+  height: 350px;
+  background-color: light bisque;
+  margin-top: 150px;
+  padding: 10px;
+  margin-left: 30px;
+  overflow: auto;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 
 .selected-character {
-  margin: 10px;
+  flex: 0 0 10%;
+}
+.selected character img {
+  width: 100px;
+  height: auto;
 }
 
 .character-details {
@@ -109,10 +138,11 @@ p {
 }
 
 .selected-thumbnail img {
- width: 15%; 
+ width: 25%; 
   /* Make the thumbnail 75% smaller */
   display: block;
-  margin: 0 auto; 
+  margin: 0 00 0 150px; 
+  margin-top: 200px;
   /* Center the thumbnail horizontally */
   border: 4px solid blue; /* Add border style */
 }
@@ -123,7 +153,25 @@ p {
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
+  z-index: 1000;
+  top: 180px;
+  color: rgb(217, 57, 78)
 }
+
+.submit-box {
+  margin-top: 20px;
+}
+#submit-box {
+  position: relative; 
+  display: inline-block;
+  
+}
+
+
+ 
+
+
+
 
 .buttons {
     position: fixed; /* Change from absolute to fixed */

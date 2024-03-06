@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAVE THE UNIVERSE!</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script defer type="module" src="./index.js"></script>
+    
 </head>
 <body>
     <header>
@@ -15,25 +15,25 @@
     <table id="character-details-table">
         <tr>
           <td class="name">Name: </td>
-          <td class="value" id="insertName">Insert Name</td>
+          <td class="value" id="insertName"></td>
           <td class="status">Status: </td>
-          <td class="value" id="insertStatus">Insert Status</td>
+          <td class="value" id="insertStatus"></td>
         </tr>
         <tr>
           <td class="species">Species: </td>
-          <td class="value" id="insertSpecies">Insert Species</td>
+          <td class="value" id="insertSpecies"></td>
           <td class="type">Type: </td>
-          <td class="value" id="insertType">Insert Type</td>
+          <td class="value" id="insertType"></td>
         </tr>
         <tr>
           <td class="gender">Gender: </td>
-          <td class="value" id="insertGender">Insert Gender</td>
+          <td class="value" id="insertGender"></td>
           <td class="origin">Origin: </td>
-          <td class="value" id="insertOrigin">Insert Origin</td>
+          <td class="value" id="insertOrigin"></td>
         </tr>
         <tr>
           <td class="location">Location:</td>
-          <td class="value" id="insertLocation">Insert Location</td>
+          <td class="value" id="insertLocation"></td>
         </tr>
       </table>
     
@@ -51,11 +51,35 @@
       <div id="selected-thumbnail" class="selected-thumbnail"></div>
       <!-- container for the selected characters displayed in a row-->
       <div id="selected-team" class="selected-team"></div>
+      <div class="buttons" id="buttons">
+        <button class="btn" onclick="one()">1</button>
+        <button class="btn active" onclick="two()">2</button>
+    </div>
+    <div class="selected-team-container">
+      <div id="squad-name-display"></div> <!-- Container for squad name display -->
+      <div class="submit-box" id="submit-box">
+          <input type="text" id="team-name-input" placeholder="Enter Squad Name">
+          <button id="submit-team-name">Submit</button>
+        </div>
+        <!--container for displaying character details at the top-->
+        <div id="display-container" class="display-container"></div> 
+        <div id="character-details" class="character-details"></div>
+        <!-- container for displaying selected character thumbnail-->
+        <div id="selected-thumbnail" class="selected-thumbnail"></div>
+        <!-- Container for the selected characters displayed in a row -->
+        <div id="selected-team" class="selected-team"></div>
+
+       
+    
+
+        
+  </div>
+</div>
       <!-- container for character list displayed in columns and rows-->
       <div class="container">
         <div id="character-list" class="character-list"></div>
       </div>
 
-     
+      <script defer type="module" src="./index.js"></script>
 </body>
 </html>
