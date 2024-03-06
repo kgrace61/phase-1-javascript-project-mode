@@ -6,21 +6,39 @@
   font-family: irishgrover;
   src: url(irishgrover.ttf)
 }
-body {
-  font-family: irishgrover, sans-serif;
-  margin: 0;
-  background-image: url('https://cdn.europosters.eu/image/1300/art-photo/rick-and-morty-space-i115643.jpg');
-  padding: 0;
+@font-face {
+  font-family: GetSchwifty;
+  src: url(get_schwifty.ttf);
 }
+@font-face {
+  font-family: irishgrover;
+  src: url(irishgrover.ttf)
+}
+body {
+    font-family: irishgrover, sans-serif;
+    margin: 0;
+    background-image: url('https://cdn.europosters.eu/image/1300/art-photo/rick-and-morty-space-i115643.jpg');
+    background-attachment: fixed; /* Make the background image fixed */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-size: cover; /* Cover the entire viewport with the background image */
+    padding: 0;
+}
+
 h1 {
+  font-family: GetSchwifty;
   font-family: GetSchwifty;
   padding: 10px;
   width: 300px;
   border: 1px solid green;
   margin: 20px;
   text-align: center;
+  border: 1px solid green;
+  margin: 20px;
+  text-align: center;
   color: greenyellow;
   background-color: black;
+  position: absolute;
+  right: calc(0.5in - 10px);
   position: absolute;
   right: calc(0.5in - 10px);
   top: 0;
@@ -29,13 +47,17 @@ table {
   background-color: black;
   color: green ;
   position: absolute;
-  right: calc(1.5in - 10px);
-  margin-top: 300px;
+  right: 10;
+  margin-top: 200px;
   padding: 20px;
   width:500px;
 }
 
 p {
+  font-family: irishgrover;
+  padding: 10px;
+  width: 390px;
+  border: 1px solid green;
   font-family: irishgrover;
   padding: 10px;
   width: 390px;
@@ -47,19 +69,27 @@ p {
   position: absolute;
   right: calc(0.5in - 10px);
   top: 0;
+  position: absolute;
+  right: calc(0.5in - 10px);
+  top: 0;
   
 }
 
 .container {
   margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 100vh; /* Set container height to 100% of viewport height */
 }
 
 .character-list {
-  display: flex;
-  flex-wrap: wrap;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-gap: 10px; /* Spacing between items */
+    justify-content: center; /* Center items horizontally */
+    margin-top: -500px; /* Adjust the margin-top value to move the images up */
+    border: 10px solid rgb(97, 240, 53);; /* Add border style to the container */
 }
 
 .character-item {
@@ -67,9 +97,34 @@ p {
 }
 
 .character-thumbnail {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   cursor: pointer;
+  border: 4px solid blue; /* Add border style */
+  border-radius: 50%; /* Make the border radius 50% of the width/height to create a circle */
+  transition: transform 0.3s ease; /* Add transition for smooth sliding effect */
+}
+
+.character-thumbnail:hover {
+  transform: scale(1.1); /* Scale the image on hover to create a slide effect */
+  border-color:rgb(97, 240, 53); /* Change border color on hover */
+}
+
+@keyframes border-animation {
+    from {
+        border-width: 2px;
+    }
+    to {
+        border-width: 10px;
+    }
+}
+.character-thumbnail-small {
+  width: 125px;
+  height: 125px;
+}
+.character-thumbnail-small {
+  width: 125px;
+  height: 125px;
 }
 .character-thumbnail-small {
   width: 125px;
@@ -85,12 +140,27 @@ p {
   padding: 10px;
   margin-left: 30px;
   overflow: auto;
+  border: 4px solid black;
+  width: 1500px;
+  height: 350px;
+  background-color: light bisque;
+  margin-top: 150px;
+  padding: 10px;
+  margin-left: 30px;
+  overflow: auto;
   display: flex;
+  justify-content: space-between;
+
   justify-content: space-between;
 
 }
 
 .selected-character {
+  flex: 0 0 10%;
+}
+.selected character img {
+  width: 100px;
+  height: auto;
   flex: 0 0 10%;
 }
 .selected character img {
@@ -103,7 +173,11 @@ p {
   text-align: center;
 }
 
-/*Styling for the selected thumbnail */
+#character-details-table {
+    display: none; /* Hide the table by default */
+  }
+
+/* Styling for the selected thumbnail */
 .selected-thumbnail {
   text-align: center;
   margin-top: 300px;
@@ -115,7 +189,10 @@ p {
   display: block;
   margin: 0 00 0 150px; 
   margin-top: 200px;
+  margin: 0 00 0 150px; 
+  margin-top: 200px;
   /* Center the thumbnail horizontally */
+  border: 4px solid blue; /* Add border style */
 }
 
 /* Styling for the title of the selected team */
@@ -124,6 +201,44 @@ p {
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
+  z-index: 1000;
+  top: 180px;
+  color: rgb(217, 57, 78)
+}
+
+.submit-box {
+  margin-top: 20px;
+}
+#submit-box {
+  position: relative; 
+  display: inline-block;
+  
+}
+
+
+ 
+
+
+
+
+.buttons {
+    position: fixed; /* Change from absolute to fixed */
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    left: 48.81%;
+    transform: translateX(-50%);
+    z-index: 1; /* Ensure the buttons are above other elements */
+}
+
+.btn {
+    width: 80px; /* Adjust width as needed */
+    height: 80px; /* Adjust height as needed */
+    margin: 0 10px; /* Add some horizontal spacing between buttons */
+    background-color: rgb(97, 240, 53); /* Change the background color */
+    border: 4px solid blue; /* Change the border color, style, and width */
+    color: red; /* Change the font color */
+    font-size: 20px; /* Change the font size */
+    font-family: cursive;
+    font-weight: bold; /* Make the font thicker */
   z-index: 1000;
   top: 180px;
   color: rgb(217, 206, 57)

@@ -186,9 +186,9 @@ function renderCharacterList(characters) {
   resetCharacterDetails();
   fetchCharacters();
 
-// Pagination buttons event listeners
-document.getElementById('page-1').addEventListener('click', () => handlePagination(1));
-document.getElementById('page-2').addEventListener('click', () => handlePagination(2));
-document.getElementById('page-3').addEventListener('click', () => handlePagination(3));
-document.getElementById('page-4').addEventListener('click', () => handlePagination(4));
+    // Pagination buttons event listeners
+    document.getElementById('page-1').addEventListener('click', () => handlePagination(1));
+    document.getElementById('page-2').addEventListener('click', () => handlePagination(2));
+    document.getElementById('page-3').addEventListener('click', () => handlePagination(3));
+    document.getElementById('page-4').addEventListener('click', () => handlePagination(4));
 });
