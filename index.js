@@ -106,6 +106,7 @@ function renderCharacterList(characters) {
    document.getElementById('insertGender').textContent = character.gender;
    document.getElementById('insertOrigin').textContent = character.origin.name;
    document.getElementById('insertLocation').textContent = character.location.name;
+   document.getElementById('character-details-table').style.display = 'block';
   }
 
   // This function adds a character to the user's team.
