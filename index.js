@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Create a div element for the selected team title and set its initial properties
   const selectedTeamTitle = document.createElement('div');
-  selectedTeamTitle.style.position = 'absolute';
   selectedTeamTitle.style.zIndex = '10';
   selectedTeamTitle.innerHTML = 'NAME YOUR SQUAD!';
   selectedTeamTitle.classList.add('selected-team-title');
@@ -134,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to render the selected team in the HTML document
   function renderSelectedTeam() {
       selectedTeam.innerHTML = ''; // Clear the selected team container
+      selectedTeam.appendChild(selectedTeamTitle); // Append the selected team title to the selected team container
       selectedCharacters.forEach(character => { // Iterate over each character in the selected team
           const selectedCharacter = document.createElement('div'); // Create a container for the selected character
           selectedCharacter.classList.add('selected-character'); // Add a CSS class to the selected character container
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // Append the selected character container to the selected team section in the HTML document
           selectedTeam.appendChild(selectedCharacter);
       });
-      selectedTeam.appendChild(selectedTeamTitle); // Append the selected team title to the selected team container
+      
   }
 
   // Function to display the clicked character thumbnail
