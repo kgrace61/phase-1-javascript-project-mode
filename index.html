@@ -15,42 +15,47 @@
             <input type="text" id="searchBox" placeholder="Search..">
           </div>
     </header>
-    <table>
-        <tr>
-          <td class="name">Name: </td>
-          <td class="value" id="insertName"></td>
-          <td class="status">Status: </td>
-          <td class="value" id="insertStatus"></td>
-        </tr>
-        <tr>
-          <td class="species">Species: </td>
-          <td class="value" id="insertSpecies"></td>
-          <td class="type">Type: </td>
-          <td class="value" id="insertType"></td>
-        </tr>
-        <tr>
-          <td class="gender">Gender: </td>
-          <td class="value" id="insertGender"></td>
-          <td class="origin">Origin: </td>
-          <td class="value" id="insertOrigin"></td>
-        </tr>
-        <tr>
-          <td class="location">Location:</td>
-          <td class="value" id="insertLocation"></td>
-        </tr>
-      </table>
+    <table id="character-details-table">
+      <tr>
+        <td class="name">Name: </td>
+        <td class="value" id="insertName"></td>
+        <td class="status">Status: </td>
+        <td class="value" id="insertStatus"></td>
+      </tr>
+      <tr>
+        <td class="species">Species: </td>
+        <td class="value" id="insertSpecies"></td>
+        <td class="type">Type: </td>
+        <td class="value" id="insertType"></td>
+      </tr>
+      <tr>
+        <td class="gender">Gender: </td>
+        <td class="value" id="insertGender"></td>
+        <td class="origin">Origin: </td>
+        <td class="value" id="insertOrigin"></td>
+      </tr>
+      <tr>
+        <td class="location">Location:</td>
+        <td class="value" id="insertLocation"></td>
+      </tr>
+    </table>
     
 
-      <div class="buttons" id="buttons">
-        <button class="btn" onclick="one()">1</button>
-        <button class="btn active" onclick="two()">2</button>
+    <div class="buttons" id="buttons">
+      <button class="btn active" id="page-1">1</button>
+      <button class="btn" id="page-2">2</button>
+      <button class="btn" id="page-3">3</button>
+      <button class="btn" id="page-4">4</button>
     </div>
+
+
     <div class="selected-team-container">
       <div id="squad-name-display"></div> <!-- Container for squad name display -->
       <div class="submit-box" id="submit-box">
           <input type="text" id="team-name-input" placeholder="Enter Squad Name">
           <button id="submit-team-name" class="submit-team-name">Submit</button>
         </div>
+      
         <!--container for displaying character details at the top-->
         <div id="display-container" class="display-container"></div> 
         <div id="character-details" class="character-details"></div>
@@ -58,10 +63,6 @@
         <div id="selected-thumbnail" class="selected-thumbnail"></div>
         <!-- Container for the selected characters displayed in a row -->
         <div id="selected-team" class="selected-team"></div>
-
-       
-    
-
         
   </div>
 </div>
