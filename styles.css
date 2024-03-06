@@ -126,18 +126,26 @@ Styling for the selected thumbnail /
   margin-bottom: 10px;
   z-index: 1000;
   top: 180px;
-  color: rgb(217, 57, 78)
+  color: rgb(217, 206, 57)
 }
 
 .submit-box {
   margin-top: 20px;
+  font-family: GetSchwifty;
+
 }
 #submit-box {
   position: relative; 
   display: inline-block;
+  font-family: GetSchwifty; 
   
 }
-
+.submit-team-name {
+    color: rgb(230, 238, 228); font-size: 17px; line-height: 17px; padding: 3px; border-radius: 7px; font-family: GetSchwifty, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(64, 170, 240) 0%, rgb(35, 203, 55) 50%, rgb(222, 27, 228) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
+    .myButton:hover {
+    background: #77ef52; }
+    .myButton:active {
+    background: #53de30; }
 
  
 

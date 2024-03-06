@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const selectedThumbnail = document.getElementById('selected-thumbnail'); // Reference to the selected thumbnail container
   let selectedCharacters = []; // Array to store selected characters
 
+
    // Adding a title to the selected characters box
    const selectedTeamTitle = document.createElement('div'); // Create a div element for the selected team title
    selectedTeamTitle.style.position = 'absolute'; // z-index only works on positioned elements
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Function to submit team name
   const submitButton = document.getElementById('submit-team-name')
+  submitButton.classList.add('submit-team-name'); // Add a CSS class to the submit button
 
   submitButton.addEventListener('click', function(event) {
       event.preventDefault();
@@ -150,7 +152,7 @@ function submitTeamName() {
   function resetCharacterDetails() {
     characterDetails.innerHTML = ''; // Clear the character details section in the HTML
     selectedThumbnail.innerHTML = ''; // Clear the selected thumbnail container
-  }
+  }åg
 
   // Call resetCharacterDetails to clear details on load
   resetCharacterDetails();
