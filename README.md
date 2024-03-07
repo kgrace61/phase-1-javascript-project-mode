@@ -69,24 +69,24 @@ Our 3 Event Listeners:
 "mouseover"- mouseover the character thumbnail to see name 
 
 Array iteration:
-For each- will be using to display images
-For each- mouseover event 
-for each- to display character information in the character info box
-map- to construct a list of previously assigned squads (stretch deliv)
+For each- will be using to display images 
+for each- to iterate over each character to display character information in the character info box
+
 
 Deliverables:
 1. User will select a character to to view details in character detail box ("click")
-2. User will Mouseover img of character to view name ("mouseover")
+2. User will hover img of character to see a slightly larger image w/ border ()
 3. User will add characters to the squad box to assemble a team of 5
-    - User will click the add to squad button (POST)
+    - User will click the add to squad button ("click")
 4. User will give squad a name by entering "name" in box and clicking enter button ("submit")
-5. User will remove characters from team by clicking "X" (DELETE)
+5. User will remove characters from team by clicking "X" 
+6. User can mouseover "SAVE THE UNIVERSE!" to change it to a very nuanced yellow instead of lime green
 
 Stretch Deliverables:
-1. Create a list of squads at the bottom to view squads you have assembled w/ corresponding squad name user has previously assigned
-2. Scroll to page 2 of characters below the group of photos of characters
-3. Search box to search a character by name
-4. Entering a new squad name to update squad name (PATCH)
+1. Scroll to page 2,3,4 of characters below the group of photos of characters
+2. Search box to search a character by name ("input")
+3. Entering a new squad name to update squad name 
+4. Uses json-server in our project to persist our app's interactivity :D
 
 Kanban Board: 
 <img src="KanbanBoard.png">

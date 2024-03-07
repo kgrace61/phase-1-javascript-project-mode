@@ -16,6 +16,20 @@ document.addEventListener('DOMContentLoaded', function() {
   selectedTeamTitle.classList.add('selected-team-title');
   selectedTeam.appendChild(selectedTeamTitle); // Append the selected team title to the selected team container
 
+  // Define a unique callback function for the mouseover event
+  function changeTextColor() {
+    // Get a reference to the header title
+    const headerTitle = document.querySelector('header h1');
+    // Change the text color when the mouse hovers over the header title
+    headerTitle.style.color = 'yellow';
+  }
+
+  // Get a reference to the header title
+  const headerTitle = document.querySelector('header h1');
+
+  // Add a mouseover event listener to the header title with the unique callback function
+  headerTitle.addEventListener('mouseover', changeTextColor);
+
   // Get a reference to the submit button for team name submission
   const submitButton = document.getElementById('submit-team-name');
   submitButton.classList.add('submit-team-name'); // Add a CSS class to the submit button
